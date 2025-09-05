@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @Slf4j
-public class Ossconfig {
+public class OssConfig {
 
     @Bean
     @ConditionalOnMissingBean
