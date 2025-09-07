@@ -13,16 +13,38 @@ public interface EmployeeService {
      * @param employeeLoginDTO
      * @return
      */
-    //登录
     Employee login(EmployeeLoginDTO employeeLoginDTO);
-//查询
+
+    /**
+     * 新增员工
+     * @param employeeDTO
+     */
     void save(EmployeeDTO employeeDTO);
-//分页查询
+
+    /**
+     * 分页查询
+     * @param employeePageQueryDTO
+     * @return
+     */
     PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
-//禁用或者开启权限
-    void startOrstop(Integer status, long id);
-    //获取员工信息
-   Employee getById(long id);
-    //编辑员信息
+
+    /**
+     * 启用禁用员工账号
+     * @param status
+     * @param id
+     */
+    void startOrStop(Integer status, Long id);
+
+    /**
+     * 根据id查询员工
+     * @param id
+     * @return
+     */
+    Employee getById(Long id);
+
+    /**
+     * 编辑员工信息
+     * @param employeeDTO
+     */
     void update(EmployeeDTO employeeDTO);
 }
